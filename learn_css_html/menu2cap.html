@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+<style>
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   } 
+   ul{
+    list-style: none;
+   }
+   ul li{
+    display: inline-block;
+    background: aqua;
+    position: relative;
+   }
+   ul li::before{
+    content: "\f061";
+    margin-right: 10px;
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    font-size: 14px;
+    color: red;
+   }
+   /* ul li::after{
+    margin-left: 10px;
+    font-size: 14px;
+    content: '\f00c';
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+   } */
+   .submenu{
+    display: none;
+    position: absolute;
+   }
+
+   ul li:hover .submenu{
+     display: block;
+   }
+</style>
+<body>
+    <ul>
+        <li>Laptop
+            <ul class="submenu">
+                <li>Dell
+                    <ul class="submenu">
+                        <li>Dell 5546</li>
+                        <li>Dell 5547</li>
+                    </ul>
+                </li>
+                <li>Asus</li>
+            </ul>
+        </li>
+        <li>May Anh
+            <ul class="submenu">
+                <li>May Co</li>
+                <li>May KTS
+                    <ul class="submenu">
+                        <li>Cannon</li>
+                        <li>Kong</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>PC</li>
+        <li>May Lanh
+            <ul class="submenu">
+                <li>Pana</li>
+                <li>Hitachi</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

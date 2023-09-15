@@ -1,0 +1,375 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "oswald-bold";
+    src: url(./assets/fonts/Oswald/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: "oswald-regular";
+    src: url(./assets/fonts/Oswald/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: "oswald-light";
+    src: url(./assets/fonts/Oswald/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: "opensans-regular";
+    src: url(./assets/fonts/OpenSans/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: "opensans-bold";
+    src: url(./assets/fonts/OpenSans/OpenSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'opensans-light';
+    src: url(./assets/fonts/OpenSans/OpenSans-Light.ttf);
+}
+.perfect-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    width: 35%;
+    list-style: none;
+}
+
+.social li:hover,.search i:hover{
+    background:#ddd;
+    color: black;
+}
+.social li,.search i{
+    width: 45px;
+    height: 39px;
+    padding: 8px 16px;
+    font-size: 15px;
+}
+.search i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap-body-outside{
+    background-color: #f1f1f1;
+}
+.wrap-body{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.slogan{
+    flex-direction: column;
+    font-family: "oswald-regular";
+    padding: 48px 16px;
+    background-color:white;
+}
+.slogan .logo{
+    font-size: 48px;
+}
+.slogan .sub-logo{
+    margin: 10px 0px;
+    font-size: 16px;
+}
+.slogan .sub-logo .quote{
+    color: white;
+    background: black;
+    padding: 0px 8px;
+    font-size: 1rem;
+}
+
+.feature{
+    background-image: url(https://www.w3schools.com/w3images/jane.jpg) ;
+    height: 1060px;   
+    background-size:cover;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature .wrap-feature{
+    padding: 12px 24px;
+}
+
+.feature .wrap-feature h1{
+    color: white;
+    font-family: 'oswald-light';
+    font-size: 35px;
+    margin: 10px 0px;
+    letter-spacing: 5px;
+}
+
+.feature .wrap-feature h2{
+    color: white;
+    font-family: 'oswald-regular';
+    font-size: 64px;
+    margin: 10px 0px;
+    letter-spacing: 4px;
+}
+
+.feature .wrap-feature button{
+    font-family: 'oswald-regular';
+    font-size: 18px;
+    background: rgba(255,255,255, 0.7);
+    border: none;
+    outline: none;
+    padding: 12px 24px;
+}
+
+.main{
+    background: #f1f1f1;
+    padding: 8px 16px;
+    border: 1px solid  rgba(0,0,0, 0.2);
+}
+.wp-content{
+    display: flex;
+    justify-content: space-between;
+}
+.left-block{
+    width: 60%;
+    padding: 8px 16px;
+}
+
+.right-block{
+    width: 40%;
+    padding: 8px 16px;
+}
+
+.left-block .post{
+    background: white;
+    padding: 16px 24px;
+}
+
+.header-post{
+    flex-direction: column;
+}
+
+.header-post h3{
+    font-size: 24px;
+    font-family: 'oswald-light';
+    margin: 10px 0px;
+}
+
+.post .sub-title{
+    font-family: 'oswald-light';
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+.header-post .sub-title .des-title{
+    font-family: 'oswald-regular';
+    color: black;
+}
+.post{
+    margin-bottom: 32px;
+}
+.post img{
+    width: 100%;
+}
+
+.post .des span{
+   font-family: 'opensans-bold';
+}
+.post .des{
+    margin: 15px 0px;
+    font-family: 'opensans-regular';
+    font-size: 15px;
+ }
+
+.more{
+    display: flex;
+    justify-content: space-between;
+}
+
+.liked{
+    background: white;
+    border: 1px solid #dadada;
+    width: 80px;
+    height: 40px;
+    padding: 8px 16px;  
+}
+.liked span{
+    font-size: 15px;
+    font-family: 'opensans-bold';
+    margin-left: 4px;
+}
+.liked:hover,.replies:hover{
+    background: #ccc;
+    color: black;
+}
+
+.replies{
+    width: 120px;
+    height: 40px;
+    background: black;
+    color: white;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-family: 'opensans-bold';
+}
+
+.replies .number-replies{
+    background: white;
+    color: black;
+    width: 25px;
+    height: 25px;
+    padding: 0px 8px;
+    margin-left: 4px;
+}
+
+.comment-list{
+    display: flex;
+    /* justify-content: space-between; */
+    font-family: 'opensans-light';
+}
+.comment-list img{
+    width: 90px;
+    height: 108px;
+    margin-right: 110px;
+    margin-bottom: 10px;
+}
+
+.comment-list h4{
+    margin: 10px 0px;
+    font-size: 15px;
+    font-family: 'oswald-light';
+    color: gray;
+}
+.comment-list .body-cmt h4 span{
+    font-size: 20px;
+    color: black;
+}
+.comment-list .body-cmt h5{
+    margin: 15px 0px;
+}
+
+hr{
+    margin: 20px 0px;
+    border: 1px solid #eee;
+}
+.author{
+    display: block;
+    margin-bottom: 32px;
+}
+.author img{
+    width: 100%;
+    display: flex;
+}
+.author .author-des{
+    padding: 5px 15px;
+    color: white;
+    background:black;
+}
+.author .author-des h4{
+    font-family: 'oswald-regular';
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.author .author-des p{
+    font-family: 'opensans-regular';
+    font-size: 15px;
+    margin: 15px 0px;
+}
+
+.widget{
+    display: block;
+}
+
+.widget .head{
+   background: black;
+   color: white;
+   display: flex;
+}
+.widget .body-widget {
+    padding: 8px 16px;
+    background:white;
+    color: black;
+    flex-direction: column;
+    
+}
+
+.widget .head h4{
+    padding: 8px 16px;
+    font-size: 20px;
+    font-family: 'oswald-light';
+    margin: 10px 0px;
+   
+}
+
+.body-widget p{
+    font-size: 15px;
+    font-family: 'opensans-regular';
+    margin: 15px 0px;
+}
+
+.body-widget input{
+    width: 100%;
+    display: block;
+    padding: 8px;
+    font-size: 15px;
+    font-family: 'opensans-regular';
+    outline: none;
+}
+
+.body-widget button{
+    margin-top: 15px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    font-size: 15px;
+    font-family: 'opensans-regular';
+}
+
+.body-widget button:hover{
+    background:#dadada;
+    color: black;
+    
+}
+
+
+@media screen and (max-width:425px){
+    .hide-on-mobile{
+         display: none !important;
+    }
+    .left-block{
+        width: 100%;
+    }
+    .right-block{
+        width: 100%;
+    }
+    .wp-content{
+        flex-wrap: wrap;
+    }
+    .comment-list{
+        display: block;
+    }
+    .feature{
+        width: 100%;
+        height: 280px;
+    }
+    .wrap-feature h2{
+        display: none;
+    }
+}

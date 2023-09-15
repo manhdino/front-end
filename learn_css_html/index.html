@@ -1,0 +1,138 @@
+<!-- 
+  + <h1> -> <h6>: heading, tự động xuống dòng
+  + <p>: paragraph, tự dộng xuống dòng   
+  + <span>: câu, không tự động xuống dòng
+  + <a>: thẻ gắn link, không tự dộng xuống dòng
+  + <img>: thẻ hình ảnh, không cần thẻ đóng,không tự động xuống dòng
+     + đường dẫn tuyệt đối: dường đẫn cứng: C:/...
+     + đường dẫn tương đối: "./thư mục hiện tại/ảnh"(hay sử dụng)
+     + đường dẫn url: copy image address
+     + alt: sẽ không hiện nếu như ảnh được hiển thị thành công
+     sẽ hiện nếu ảnh bị lỗi
+  + SEO: Search engine optimization: nghĩa là khi định nghĩa ảnh phải
+  định nghĩa thêm thông tin vào thuộc tính alt của ảnh
+     ->Vì khi google search thông tin thì nó sẽ so với định nghĩa của ảnh
+     trong thuộc tính alt để sắp xếp cho ảnh lên đầu
+  + thẻ form:
+    + input: cho nhập trên 1 dòng
+    + textarea: cho nhập trên nhiều dòng
+  + table: 
+    + tr: row
+    + td: column
+    + shortcut: tr*5>td*6: 5 rows and 6 columns
+    + th: bold(in đậm chữ)
+    + colspan: gộp cột với nhau
+    + rowspan: nối 2 hàng với nhau
+  + ul,li: list(danh sách) - dấu chấm: unorder list
+  + ol,li: list(danh sách) - số : order list
+  + div: thẻ gom tất cả các thẻ khác để chia khổi, chia layout
+  + audio: chèn file âm thanh
+  + video: chèn file or đường dẫn video
+  + pre: giống thẻ p nhưng giữ nguyên format code như thế nào hiển thị y như thế
+  + sub: hiển thị bên dưới
+  + hr: thẻ đường kẻ
+  + br: thẻ xuống dòng (break)
+  + iframe: nhúng 1 trang web khác vào or nhúng map 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream 8 Nodemy</title>
+</head>
+
+<body>
+    <h1>H1</h1>
+    <h2>H2</h2>
+    <h6>H6</h6>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, ut nulla? Officiis explicabo perspiciatis sunt
+        mollitia ullam culpa eaque maiores amet. Repellat quam nesciunt quia aut facilis, excepturi hic ea.</p>
+
+    <span>Cau van 1</span>
+    <span>Cau van 2</span>
+
+    <a href="https://google.com">
+        <span> Chuong 1</span>
+    </a>
+
+    <!-- <img src="https://vapa.vn/wp-content/uploads/2022/12/hinh-nen-dep-full-hd-001.jpg"
+     alt="Laptop Background"> -->
+
+    <form action="">
+        <input type="text">
+        <input type="password">
+        <textarea name="comment" id="" cols="30" rows="10"></textarea>
+        <input type="date">
+        <input type="file">
+        <input type="range">
+        <input type="color">
+        <input type="checkbox">
+
+        <input name="gioi tinh" type="radio">
+        <input name="gioi tinh" type="radio">
+
+        <select name="" id="">
+            <option value="1">Toan</option>
+            <option value="2">Ly</option>
+            <option value="3">Hoa</option>
+        </select>
+
+        <input type="email">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <table border="1">
+        <tr>
+            <th>cot1</th>
+            <td>cot2</td>
+            <td>cot3</td>
+            <td>cot4</td>
+        </tr>
+        <tr>
+            <td rowspan="2">cot1</td>
+            <td>cot2</td>
+            <td colspan="2">cot3</td>
+        </tr>
+        <tr>
+            <td>cot2</td>
+            <td colspan="2">cot3</td>
+        </tr>
+    </table>
+
+  <div>
+    <ul>
+        <li>Toan</li>
+        <li>Ly</li>
+        <li>Hoa</li>
+    </ul>
+    <ol>
+        <li>Toan</li>
+        <li>Ly</li>
+        <li>Hoa</li>
+    </ol>
+  </div>
+
+  <picture>
+    <source media="(min-width: 1000px)" srcset="">
+    <source media="(min-width: 375px)" srcset="">
+  </picture>
+
+  <audio src=""></audio>
+  <video src=""></video>
+  <pre>
+     Dong 1
+         Dong 2
+            Dong 3
+  </pre>
+  H<sub>2</sub>O
+  2<sup>8</sup>
+  <hr>
+  
+  <iframe src="https://dantri.com.vn/" ></iframe>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px dotted black;
+}
+
+.header{
+    display: flex;
+    background: black;
+    color: white;
+    flex-direction: space-between;
+}

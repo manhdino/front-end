@@ -1,0 +1,304 @@
+<!-- 
+  + Cách thêm style cho css:
+     + inline style: style luôn vào bên cạnh thẻ <p style=""></p>
+     + internal style: style ở phần thẻ <style></style> trong <head> của file html
+     + external style: style ở 1 file css riêng(hay dùng)
+  + internal style: 
+        + trỏ theo tên: p{style ...}
+        + trỏ theo class: .class{style ...  }
+        + trỏ theo id: #tên_id{style ...}
+
+  + CSS cho thẻ html thì cần .tên_class{}
+  + id sẽ được ưu tiên hơn class: id > class > tên thẻ.trong file css biểu diễn
+  bởi dấu #
+  + div p(p bao bọc bởi thẻ div) > p thường(p không bao bọc bởi thẻ div)
+  + muốn cho thằng nào là mạnh nhất thì thêm !important: không nên lạm dùng important
+  + nên dùng kiểu phân cấp div p
+
+  + Các style cho text:
+     + text-align: căn lề chữ(center: giữa)
+     + text-transform: uppercase (biến chữ thường thành chữ hoa) = ngược lại lowercase
+     + text-decoration: underline: gạch chân text(none không gạch chân), linethrough:gạch ngang chữ
+     + @font-face: thêm font từ Internet
+     + color: màu chữ
+     + font-size:kích cỡ
+     + font-weight: in đậm(100 -> 900) bold: 700
+     + font-style:in nghiêng: italic
+     + font-family: chọn kiểu font: area
+     + background: màu nền
+     + mã màu: rgb(x,y,z): mỗi màu đều cấu hình từ 3 màu cơ bản: red,green,blue;
+     vì vậy chỉ cần thay đổi 3 giá trị x,y,z thì sẽ ra các loại màu khác nhau
+       ->rgba(255,255,255,5): 5 chính là độ trong suốt
+
+   + border, margin, padding
+      + margin: vị trí so với phần tử khác
+      + padding: vị trí chữ trong khối
+      + border: đường viền bao quanh khối 
+      + padding 10px 30px( 10 là trên dưới 30 là trái phải )
+      + padding 10px 20px 30px 40px: chạy theo chiều kim đồng hồ(trên phải dưới trái)
+      + box-sizing: 
+        + nếu ta chỉ sẽ mỗi width thôi ví dụ = 200px thì 200px đó
+        sẽ là độ rộng của chữ(content)
+        + và nếu ta thêm padding or border vào nữa thì độ dài khối sẽ lớn hơn
+        200px
+        + nhưng nếu sử dụng box-sizing:border-box; thì nó sẽ tự động co lại cho
+        độ dài khối chính xác là 200px tức là lúc này độ dài chữ(content) chắc
+        chắn sẽ < 200px
+        + nên dễ quản lý nhất nên thêm box-sizing: border-box;
+    + hover: style chỉ được áp dụng khi đưa chuột qua
+       P:hover{style....}
+       Hover quan hệ cha con
+         Cha:hover con{style...}
+    + display:
+        + block: tràn hết 1 dòng, lý do vì sao thẻ p lại có tự động xuống dòng
+        vì mặc định của nó đã có display: block
+        + còn thằng span thì chỉ tràn đến ô content thôi nên thẻ span không 
+        có tự động xuống dòng 
+        + inline: tức là sẽ chỉ tràn đến content thôi giống như thẻ span
+         khi sử dụng inline rồi thì sẽ không thể set được width hay height
+        + nếu sử dụng inline-block: thì sẽ set được width hay height
+    + flex:
+        + display: flex; mặc định co lại giống như inline-block
+        + justify-content: center; ra giữa
+                           space-around: giãn đều
+                           space-between: giãn với đầu hàng làm chuẩn
+        + align-items: giống như justify-content nhưng theo chiều dọc
+          ->notes: justify-content và alige-items: căn items, content trong khối
+        + flex-direction: căn vị trí của khối(row, column)
+        + flex-wrap: wrap; nghĩa là trong trường hợp có quá nhiều khối mà
+        nếu ta sẽ flex-direction: row thì nó sẽ dồn hết tất cả các khối thành 1
+        hàng nhưng do không đủ độ dài nên nó sẽ co phần content lại
+           VD: nếu không đủ thì:   Child1  sẽ co lại thành Child
+                                                              1 
+        + do vậy cần wrap để nó sẽ tự động xuống dòng thứ 2 mà không ảnh hưởng 
+        đến content
+        + vị trí: content(width,height) < padding < border < margin < position(left,right,top,bottom ) 
+        + Position: 
+           + static: top,bottom,right,left sẽ không hoạt động - tương đương với không có position trong style của css
+           + sử dụng để định vị vị trí hiển thị của các phần tử thẻ HTML
+           +  Nếu thuộc tính position được đặt thành relative, absolute hoặc fixed thì ta có thể thiết lập các thuộc tính top, bottom, left và right.
+           + Nếu thuộc tính position được đặt thành static thì các thuộc tính top, bottom, left và right sẽ không có hiệu lực.
+           + khi muốn căn phần tử con theo phần tử cha: 
+               + cha: position: relative,fixed,absolute
+               + con: position: absolute(căn vị trí bên trong cha sử dụng left,right,bottom,top)
+               và căn vị trí so với web sử dụng margin
+          + relative: Vị trí tương đối so với vị trí mặc định 
+          + absolute: Vị trí tuyệt đối cho các thành phần theo thành phần bao ngoài(cha) hoặc cửa sổ trình duyệt(cha gốc)
+          + fixed: Định vị theo màn hình và luôn cố định ở một ví trí trên web cho dù
+          có scroll - dùng cho back to top or header
+          + sticky: Vị trí của phần tử được định vị khi người dùng sử dụng thanh cuộn.
+          
+          + Response: nên dùng %
+
+           
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /*Tạo biến trong CSS*/
+        :root {
+            --my-color: rgb(255, 112, 23);
+        }
+        
+        /*Do Google Chrome luôn có 1 margin mặc định là 8px ta cần xóa đi*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* .tieude{
+            color: blue;
+        }
+
+        #logo{
+            color: red;
+        } */
+
+        /* p{
+            color: aqua !important;
+        } */
+
+        p {
+            color: var(--my-color);
+
+            /* font-family: "fontcuatoi"; */
+        }
+
+        /* Không cần dựa vào id or class mà dựa vào vị trí của thẻ p trong div*/
+        /* div p{
+            color: red;
+        } */
+
+        div>p {
+            /* Chỉ áp dụng với thằng con trực tiếp(con gần nhất) ko áp dụng với con của con(cháu)*/
+            color: red;
+            /*lúc này cháu sẽ chịu áp dụng của p thường màu aqua*/
+        }
+
+        @font-face {
+            font-family: "fontcuatoi";
+            /*tên của font giống như tên biến*/
+            src: url("file font.tff");
+            /*link tới file font .tff*/
+        }
+
+        .border {
+            color: blue;
+            background-color: var(--my-color);
+            padding: 10px;
+            border: 5px solid black;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .hover {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .hover:hover {
+            background-color: blue;
+        }
+
+        .submenu {
+            display: none;
+        }
+
+        ul li:hover .submenu {
+            display: block;
+        }
+
+        span {
+            display: block;
+        }
+
+        .child{
+            border: 1px solid black;
+            /* display: inline-block; */
+        }
+        /*perfect-center: giữa tuyệt đối cả dọc và ngang*/
+        .parent{
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;/*Theo chiều ngang*/
+            align-items: center;  /*Theo chiều dọc*/
+            height: 300px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .block1{
+            position: relative;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            top: 50px;
+        }
+
+        .child1{
+            position: absolute;
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            left: 100px
+        }
+        .parent1{
+            border: 1px solid black;
+            position: fixed;  
+            width: 300px;
+            height: 300px;
+            left:0px;
+            top: 0px;
+        }
+        body{
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p class="tieude">Test</p>
+    <p id="logo" class="tieude">Logo</p> -->
+<!-- 
+    <div>
+        <p>Bên trong</p>
+        <span>
+            <p>Bên trong nữa</p>
+        </span>
+    </div>
+
+    <p>Bên ngoài </p>
+
+    <div class="border">TEST</div>
+
+    <div class="hover">
+        Block A
+    </div>
+
+
+    <ul>
+        <li>Toan</li>
+        <li>Ly
+            <ul class="submenu">
+                <li>Ly 1.1</li>
+                <li>Ly 1.2</li>
+                <li>Ly 1.3</li>
+            </ul>
+        </li>
+        <li>Hoa</li>
+    </ul>
+
+    <p style="display: inline;">The p</p>
+    <p style="display: inline;">The p2</p>
+    <span>The Span</span>
+    <span>The Span2</span>
+
+    <div class="parent">
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+
+    </div> -->
+     
+    <!-- relative -->
+    <!-- <div class="block1">
+        block1
+    </div> -->
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium omnis minima ullam quisquam debitis. Nesciunt minima tempora minus voluptates similique consequuntur dolor corrupti aliquam, adipisci tenetur, deleniti sapiente, quos quidem?</p>
+    <!-- absolute -->
+    <div class="parent1">
+        <div class="child1">Block1</div>
+    </div>
+    <div class="mota">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, eligendi! Ab amet illo porro nostrum, sint officiis impedit voluptas, quam praesentium voluptates sequi, ad eum dignissimos? Adipisci magni magnam provident.</div>
+</body>
+
+</html>
