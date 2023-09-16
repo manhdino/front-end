@@ -5,10 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .bg-aqua{
+            background-color: aqua;
+        }
+        .dom-events-method  ul{
+            display: none;
+        }
+        .dom-events-method input:focus ~ ul{
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 id="get-el-id">GET ELEMENT BY ID</h1>
+    <!-- <h1 id="get-el-id">GET ELEMENT BY ID</h1>
     <h2 class="get-el-class">GET ELEMENT BY CLASS1</h2>
     <h2 class="get-el-class">GET ELEMENT BY CLASS2</h2>
     <h2 class="get-el-class">GET ELEMENT BY CLASS3</h2>
@@ -21,8 +35,10 @@
         <h2 class="heading-2">Heading 2 - 2</h2>
         <h2 class="heading-2">Heading 2 - 3</h2>
     </div>
-     <form action="" id="form-1">Form1</form>
-     <form action="" id="form-2">Form2</form>
+    <form action="" id="form-1">Form1</form>
+    <form action="" id="form-2">Form2</form>
+
+
     <div class="box-1">
         <ul>
             <li>JS 1</li>
@@ -43,7 +59,98 @@
     <div class="box-3">
         <h1>Heading</h1>
     </div>
+
+    <div class="box-4">
+        <h1 class="heading-text">Heading Text</h1>
+    </div>
+
+    <div class="box-5">
+        <h1 class="heading">
+            <span>Heading</span>
+            <span>Text</span>
+            <style>
+                .box-text{
+                   width: 100px;
+                   height: 100px;
+                }
+            </style>
+        </h1>
+    </div>
+
+    <div id='hello'>
+        Hello Javascript
+        <span style="display:none;"> 2020</span>
+    </div>
+
+    <div class="box-6">
+        <h1>Heading</h1>
+    </div>
+
+    <div class="box-7"></div> -->
+<!-- 
+    <div class="box-dom-css"></div>
+    <div class="box-dom-class-list      perfect-center">
+        <h1>CLASS LIST</h1>
+    </div> -->
+    
+
+    <div class="box-dom-events"> 
+        <!-- this: chính là Element Node của h1  -->
+         <!-- <h1 onmouseover="console.log(this.innerText)">
+            <span onmouseover="console.log(this)">Dom Events</span>
+        </h1> -->
+         <h1>
+            <span>DOM Events 1</span>
+        </h1>
+        <h1>
+            <span>DOM Events 2</span>
+        </h1>
+        <h1>
+            <span>DOM Events 3</span>
+        </h1>
+    </div> 
+
+    <div class="dom-events-example">
+        <input type="text">
+        <input type="checkbox">
+
+        <select>
+            <option value="id-JS">JS</option>
+            <option value="id-PHP">PHP</option>
+            <option value="id-NodeJs">NodeJS</option>
+        </select>
+        <input type="text" class="key-up-down">
+    </div>
+
+    <!-- <div class="dom-events-method">
+        <a href="https://f8.edu.vn">
+            Học lập trình
+        </a>
+        <br />
+        <a href="https://google.com">
+            Google
+        </a>
+        <br />
+       
+        <input type="text" placeholder="Tìm kiếm">
+        <ul>
+            <li>JS</li>
+            <li>PHP</li>
+            <li>NodeJs</li>
+        </ul>
+
+        <div >
+            DIV 
+            <button>Click me</button>
+        </div>
+    </div> -->
+    <br />
+    <div class="event-listener">
+        <button id="btn">Click me!</button>
+    </div>
+    <script src="./dom.js">     
+    </script>
 </body>
-<script src="./dom.js"></script>
+
 
 </html>
